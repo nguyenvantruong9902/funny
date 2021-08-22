@@ -7,3 +7,9 @@ function onHoverOnName() {
    name.style.top = `${position}%`;
    name.style.color = `#${color}`;
 }
+
+function onClickOnName() {
+    document.getElementsByClassName('container')[0].innerHTML = `
+       <span class='welcome'>Welcome to Funny</span>
+    `
+}

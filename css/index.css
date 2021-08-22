@@ -1,11 +1,43 @@
-#name{
+body{
+    background-image: url('../assets/web-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 50%;
+}
+
+#name, .welcome{
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-
-    font-size: x-large;
     font-weight: bold;
-    color: deeppink;
+}
+
+#name{
+    font-size: x-large;
+    color: gray;
+    transition: all 0.3s linear;
+}
+
+.welcome{
+    font-size: xx-large;
+    margin-left: -100px;
+    margin-top: -50px;
+    animation: transform 3s infinite;    
+}
+
+@keyframes transform {
+    0% {
+        transform: scale(0.5);
+        color: blue;
+    }
+    50%{
+        transform: scale(1.5);
+        color: yellow;
+    }
+    100%{
+        transform: scale(1);
+        color: red;
+    }
 }
