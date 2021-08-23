@@ -1,15 +1,31 @@
 function onHoverOnName() {
-   const name = document.getElementById('name');
-   const position = Math.floor(Math.random() * 100);
-   const color = Math.floor(Math.random()*16777215).toString(16);
+     const name = document.getElementById("name");
+     const positionX = Math.floor(Math.random() * 100);
+     const positionY = Math.floor(Math.random() * 100);
+     const color = Math.floor(Math.random() * 16777215).toString(16);
 
-   name.style.left = `${position / 2}%`;
-   name.style.top = `${position}%`;
-   name.style.color = `#${color}`;
+     name.style.left = `${positionX}%`;
+     name.style.top = `${positionY}%`;
+     name.style.color = `#${color}`;
 }
 
-function onClickOnName() {
-    document.getElementsByClassName('container')[0].innerHTML = `
-       <span class='welcome'>Welcome to Funny</span>
-    `
+function onInputLover() {
+     const iLU = "I Love You!";
+     const lover = document.getElementById("lover");
+     let index = 0;
+     let temp = "";
+
+     setInterval(() => {
+          if (index === iLU.length) return;
+          temp += iLU[index];
+          lover.value = temp;
+          index++;
+     }, 100);
+}
+
+function onSubmitLover() {
+     const lover = document.getElementById("lover");
+     if (!lover.value) {
+          alert("Chưa nhập kìa má :))");
+     }
 }
