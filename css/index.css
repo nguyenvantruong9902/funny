@@ -1,8 +1,9 @@
 body {
      background-image: url("../assets/web-bg.jpg");
      background-repeat: no-repeat;
-     background-position: top;
-     background-size: 50%;
+     background-position: center;
+     background-size: contain;
+     height: 100vh;
 }
 
 #name {

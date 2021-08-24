@@ -23,8 +23,8 @@
 </head>
 
 <body>
-    <div class="container m-3">
-        <span id="name" data-toggle="modal" data-target="#exampleModalCenter" onmouseover="onHoverOnName()">Nguyễn Văn
+    <div class="container">
+        <span id="name" data-toggle="modal" data-target="#exampleModalCenter">Nguyễn Văn
             Trường</span>
 
         <!-- Modal -->
@@ -35,7 +35,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">
                             Xin chào!
-                            <img src="assets/modal-icon.png" width="25" />
+                            <img src="assets/funny-icon.png" width="25" />
                         </h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -52,7 +52,7 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">
                             Đóng
                         </button>
-                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                        <button type="submit" class="btn btn-primary" data-toggle="modal"
                             data-target=".bd-example-modal-sm" onclick="onSubmitLover()">
                             Kết quả
                         </button>
@@ -64,9 +64,7 @@
         <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-sm">
-                <div class="modal-content p-3">
-                    <img class="lover-result" src="assets/modal-icon.png" />
-                </div>
+                <div id='results' class="modal-content p-3" />
             </div>
         </div>
     </div>

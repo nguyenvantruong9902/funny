@@ -25,7 +25,16 @@ function onInputLover() {
 
 function onSubmitLover() {
      const lover = document.getElementById("lover");
+     const results = document.getElementById("results");
+     const image = document.createElement("img");
+     image.className = "lover-result";
      if (!lover.value) {
-          alert("Chưa nhập kìa má :))");
+          results.innerHTML = `
+          <img class="lover-result" src="assets/angry-icon.png" />
+          `;
+     } else {
+          results.innerHTML = `
+          <img class="lover-result" src="assets/funny-icon.png" />
+          `;
      }
 }
