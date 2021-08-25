@@ -44,6 +44,7 @@ body {
 .left-content p,
 .right-content p {
      animation: 2.2s scaling infinite;
+     margin: 0;
 }
 
 .left-content p:nth-child(1),
