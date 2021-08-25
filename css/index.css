@@ -74,6 +74,11 @@ body {
      animation: transform 3s infinite;
 }
 
+#results {
+     max-width: 300px;
+     margin: auto;
+}
+
 #results img.left-breast,
 #results img.right-breast {
      position: absolute;
