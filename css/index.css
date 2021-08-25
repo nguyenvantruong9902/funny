@@ -1,26 +1,101 @@
 body {
+     height: 100vh;
+
      background-image: url("../assets/web-bg.jpg");
      background-repeat: no-repeat;
      background-position: center;
      background-size: contain;
-     height: 100vh;
+}
+
+.container {
+     height: 100%;
 }
 
 #name {
-     position: absolute;
+     position: fixed;
      left: 50%;
      top: 50%;
+
      -webkit-transform: translate(-50%, -50%);
      transform: translate(-50%, -50%);
+
      font-weight: bold;
      text-align: center;
      font-size: x-large;
      color: gray;
+     cursor: pointer;
      transition: all 0.3s linear;
+
+     width: 227px;
+}
+
+.left-content,
+.right-content {
+     display: flex;
+
+     position: fixed;
+     top: 50%;
+
+     font-size: 40px;
+     font-weight: 900;
+     cursor: pointer;
+}
+
+.left-content p,
+.right-content p {
+     animation: 2.2s scaling infinite;
+}
+
+.left-content p:nth-child(1),
+.right-content p:nth-child(1) {
+     animation-delay: 140ms;
+     color: blue;
+}
+.left-content p:nth-child(2),
+.right-content p:nth-child(2) {
+     animation-delay: 280ms;
+     color: yellow;
+}
+.left-content p:nth-child(3),
+.right-content p:nth-child(3) {
+     animation-delay: 420ms;
+     color: red;
+}
+
+.left-content {
+     left: 10%;
+}
+
+.right-content {
+     right: 10%;
 }
 
 .lover-result {
      animation: transform 3s infinite;
+}
+
+#results img.left-breast,
+#results img.right-breast {
+     position: absolute;
+     cursor: pointer;
+}
+
+#results img.left-breast:hover,
+#results img.right-breast:hover {
+     transform: scale(1.1);
+     transition: all 0.2s ease-in-out;
+}
+
+#results img.left-breast {
+     top: 180px;
+     width: 41px;
+     left: 84px;
+}
+
+#results img.right-breast {
+     top: 172px;
+     width: 51px;
+     right: 124px;
 }
 
 @keyframes transform {
@@ -35,5 +110,37 @@ body {
      100% {
           transform: scale(0.5);
           color: red;
+     }
+}
+
+@keyframes scaling {
+     20% {
+          transform: scale(0.9, 1) rotateY(-10deg);
+     }
+     40% {
+          transform: scale(0.9, 2) translateY(-16px);
+     }
+     60% {
+          transform: scale(0.9, 1) rotateY(-5deg);
+     }
+     80% {
+          transform: scale(0.9, 2) translateY(-16px);
+     }
+}
+
+@media only screen and (max-width: 767px) {
+     .left-content,
+     .right-content {
+          left: 50%;
+          transform: translateX(-50%);
+     }
+
+     .left-content {
+          top: 15%;
+     }
+
+     .right-content {
+          top: 85%;
+          right: auto;
      }
 }

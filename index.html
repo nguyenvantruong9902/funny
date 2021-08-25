@@ -24,10 +24,11 @@
 
 <body>
     <div class="container">
-        <span id="name" data-toggle="modal" data-target="#exampleModalCenter" onmouseover="onHoverOnName()">Nguyễn Văn
+        <span id="name" data-toggle="modal" data-target="#exampleModalCenter" onclick="onClickName()"
+            onmouseover="onHoverOnName()">Nguyễn Văn
             Trường</span>
 
-        <!-- Modal -->
+        <!-- Lover modal -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -61,6 +62,7 @@
             </div>
         </div>
 
+        <!-- Results -->
         <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-sm">
@@ -68,6 +70,9 @@
             </div>
         </div>
     </div>
+
+    <div id="content">
+
 </body>
 
 </html>
