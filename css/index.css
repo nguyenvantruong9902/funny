@@ -123,13 +123,13 @@ body {
           transform: scale(0.9, 1) rotateY(-10deg);
      }
      40% {
-          transform: scale(0.9, 2) translateY(-16px);
+          transform: scale(0.9, 2) translateY(-5px);
      }
      60% {
           transform: scale(0.9, 1) rotateY(-5deg);
      }
      80% {
-          transform: scale(0.9, 2) translateY(-16px);
+          transform: scale(0.9, 2) translateY(-5px);
      }
 }
 
